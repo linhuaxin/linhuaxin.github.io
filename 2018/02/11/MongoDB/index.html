@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猩猩點燈">
 <meta property="og:description" content="一、yum 安装：编辑 Mongodb 安装源1vim /etc/yum.repos.d/mongodb-org-3.6.repo 编辑内容如下  [mongodb-org-3.6]name=MongoDB Repositorybaseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/gpgchec">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-11T09:40:08.007Z">
+<meta property="og:updated_time" content="2018-02-12T02:11:13.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB">
 <meta name="twitter:description" content="一、yum 安装：编辑 Mongodb 安装源1vim /etc/yum.repos.d/mongodb-org-3.6.repo 编辑内容如下  [mongodb-org-3.6]name=MongoDB Repositorybaseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/gpgchec">
@@ -360,10 +360,11 @@
 </blockquote>
 <p>安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mongodb-org</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<p>修改配置文件的 bind_ip, 默认是 127.0.0.1 只限于本机连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/mongod.conf</span><br></pre></td></tr></table></figure></p>
+<p>修改配置文件的 bindIp, 默认是 127.0.0.1 只限于本机连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mongod.conf</span><br></pre></td></tr></table></figure></p>
 <p>启动命令<br>service mongod start</p>
-<p> 停止命令:<br>service mongod stop</p>
-<p> 重启命令:<br>service mongod stop</p>
+<p>停止命令:<br>service mongod stop</p>
+<p>重启命令:<br>service mongod stop</p>
+<p>远程连接:<br>mongo linhuaxin.com:27017</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
 <li><p><a href="https://www.cnblogs.com/hackyo/p/7967170.html" target="_blank" rel="noopener">Centos下安装配置Mongodb3.6</a></p>
 </li>
@@ -411,6 +412,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/12/Express/" rel="prev" title="Express">
+                Express <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +492,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -498,7 +503,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -509,7 +514,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猩猩點燈">
 <meta property="og:description" content="一、安装安装 express1npm install express --save 二、使用 express-generator 生成应用骨架安装 express-generator1$ npm install express-generator -g 查看可选命令1$ express -h 创建应用1$ express webapp 安装依赖12$ cd myapp $ npm install">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T00:55:09.174Z">
+<meta property="og:updated_time" content="2018-02-27T06:30:01.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Express">
 <meta name="twitter:description" content="一、安装安装 express1npm install express --save 二、使用 express-generator 生成应用骨架安装 express-generator1$ npm install express-generator -g 查看可选命令1$ express -h 创建应用1$ express webapp 安装依赖12$ cd myapp $ npm install">
@@ -360,6 +360,7 @@
 <p>安装依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> myapp </span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
 <p>启动应用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
 <p>允许跨域<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Content-Type,Content-Length, Authorization, Accept,X-Requested-With"</span>);</span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Methods"</span>,<span class="string">"PUT,POST,GET,DELETE,OPTIONS"</span>);</span><br><span class="line">    res.header(<span class="string">"X-Powered-By"</span>,<span class="string">' 3.2.1'</span>)</span><br><span class="line">    <span class="keyword">if</span>(req.method === <span class="string">"OPTIONS"</span>) res.send(<span class="number">200</span>);<span class="comment">/*让options请求快速返回*/</span></span><br><span class="line">    <span class="keyword">else</span>  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>热部署<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g supervisor</span><br><span class="line">$ supervisor app.js</span><br></pre></td></tr></table></figure></p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
 <li><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">Express 中文网</a></li>
 </ol>
@@ -482,7 +483,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

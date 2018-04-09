@@ -330,12 +330,8 @@
 
       
         
-          <h4 id="包"><a href="#包" class="headerlink" title="包"></a>包</h4><ol>
-<li><p><a href="https://www.npmjs.com/package/css-loader" target="_blank" rel="noopener">css-loader</a><br>The css-loader interprets @import and url() like import/require() and will resolve them.<br>日期：2018-03-16 10:35:34，版本：0.28.11<br>日期：2017-03-13 13:45:04，版本：0.27.3</p>
-</li>
-<li><p><a href="https://www.npmjs.com/package/style-loader" target="_blank" rel="noopener">style-loader</a><br>Adds CSS to the DOM by injecting a style tag<br>日期：2018-03-09 11:40:21，版本：0.20.3<br>日期：2017-03-28 13:29:00，版本：0.16.1</p>
-</li>
-</ol>
+          <h4 id="包"><a href="#包" class="headerlink" title="包"></a>包</h4><p>1、<a href="https://www.npmjs.com/package/css-loader" target="_blank" rel="noopener">css-loader</a><br>The css-loader interprets @import and url() like import/require() and will resolve them.<br>日期：2018-03-16 10:35:34，版本：0.28.11<br>日期：2017-03-13 13:45:04，版本：0.27.3<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -D css-loader</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> config = &#123;</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">        use: [</span><br><span class="line">          <span class="string">'style-loader'</span>,</span><br><span class="line">          <span class="string">'css-loader'</span></span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/04/09/npmjs/#more" rel="contents">

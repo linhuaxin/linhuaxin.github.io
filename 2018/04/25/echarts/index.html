@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="测试,Mocha,Chai," />
+  <meta name="keywords" content="图表," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Mocha 是一个功能强大的 JavaScript 测试框架，可以运行在和浏览器环境中 安装 Mocha：1$ npm install --save-dev mocha">
-<meta name="keywords" content="测试,Mocha,Chai">
+<meta name="description" content="参考 Vue 爬坑之路（八）—— 使用 Echarts 创建图表">
+<meta name="keywords" content="图表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mocha">
-<meta property="og:url" content="http://yoursite.com/2017/11/25/Mocha/index.html">
+<meta property="og:title" content="echarts">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/echarts/index.html">
 <meta property="og:site_name" content="猩猩點燈">
-<meta property="og:description" content="Mocha 是一个功能强大的 JavaScript 测试框架，可以运行在和浏览器环境中 安装 Mocha：1$ npm install --save-dev mocha">
+<meta property="og:description" content="参考 Vue 爬坑之路（八）—— 使用 Echarts 创建图表">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-05T01:12:53.893Z">
+<meta property="og:updated_time" content="2018-04-25T01:35:00.112Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mocha">
-<meta name="twitter:description" content="Mocha 是一个功能强大的 JavaScript 测试框架，可以运行在和浏览器环境中 安装 Mocha：1$ npm install --save-dev mocha">
+<meta name="twitter:title" content="echarts">
+<meta name="twitter:description" content="参考 Vue 爬坑之路（八）—— 使用 Echarts 创建图表">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/25/Mocha/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/25/echarts/"/>
 
 
 
 
 
-  <title>Mocha | 猩猩點燈</title>
+  <title>echarts | 猩猩點燈</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/Mocha/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/echarts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mocha</h1>
+          <h1 class="post-title" itemprop="name headline">echarts</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T16:45:25+08:00">
-                2017-11-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T09:33:59+08:00">
+                2018-04-25
               </time>
             
 
@@ -293,28 +293,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/测试/" itemprop="url" rel="index">
-                    <span itemprop="name">测试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -322,7 +300,7 @@
 
           
           
-             <span id="/2017/11/25/Mocha/" class="leancloud_visitors" data-flag-title="Mocha">
+             <span id="/2018/04/25/echarts/" class="leancloud_visitors" data-flag-title="echarts">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -353,15 +331,10 @@
       
 
       
-        <p>Mocha 是一个功能强大的 JavaScript 测试框架，可以运行在和浏览器环境中</p>
-<h3 id="安装-Mocha："><a href="#安装-Mocha：" class="headerlink" title="安装 Mocha："></a>安装 Mocha：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev mocha</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>使用 node 自带的断言模块 assert<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> assert = <span class="built_in">require</span>(<span class="string">'assert'</span>);</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'加法运算测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    it(<span class="string">'1 + 1 等于 2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      assert.equal(<span class="number">1</span> + <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Chai："><a href="#Chai：" class="headerlink" title="Chai："></a>Chai：</h3><p>使用功能更强大 <a href="http://chaijs.com/" target="_blank" rel="noopener">Chai</a> 断言库，支持 expect、assert 和 should 三种断言风格</p>
-<h4 id="安装-Chai："><a href="#安装-Chai：" class="headerlink" title="安装 Chai："></a>安装 Chai：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save-dev chai</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> expect = <span class="built_in">require</span>(<span class="string">'chai'</span>).expect;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'字符串测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  it(<span class="string">'测试字符串 foo'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> foo = <span class="string">'foobar'</span>;</span><br><span class="line">    expect(foo).to.have.lengthOf(<span class="number">6</span>);</span><br><span class="line">    expect(foo).to.be.a(<span class="string">'string'</span>);</span><br><span class="line">    expect(foo).to.be.not.an.instanceof(<span class="built_in">String</span>);</span><br><span class="line">    expect(foo).to.equal(<span class="string">'foobar'</span>);</span><br><span class="line">    expect(foo).to.include(<span class="string">'bar'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="异步测试："><a href="#异步测试：" class="headerlink" title="异步测试："></a>异步测试：</h3><p>调用 done 回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> expect = <span class="built_in">require</span>(<span class="string">'chai'</span>).expect;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'异步测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  it(<span class="string">'测试 setTimeout'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">done</span>) </span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      expect(<span class="number">1</span> + <span class="number">1</span>).to.be.equal(<span class="number">2</span>);</span><br><span class="line">      done();</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="钩子："><a href="#钩子：" class="headerlink" title="钩子："></a>钩子：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> expect = <span class="built_in">require</span>(<span class="string">'chai'</span>).expect;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'hooks'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  it(<span class="string">'1 + 1'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    expect(<span class="number">1</span> + <span class="number">1</span>).to.be.equal(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  before(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'所有测试用例前运行'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  beforeEach(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'每个测试用例前运行'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  afterEach(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'每个测试用例后运行'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  after(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'所有测试用例后运行'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ol>
+<li><a href="https://www.cnblogs.com/wisewrong/p/6558001.html" target="_blank" rel="noopener">Vue 爬坑之路（八）—— 使用 Echarts 创建图表</a></li>
+</ol>
+
       
     </div>
     
@@ -378,11 +351,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/测试/" rel="tag"># 测试</a>
-          
-            <a href="/tags/Mocha/" rel="tag"># Mocha</a>
-          
-            <a href="/tags/Chai/" rel="tag"># Chai</a>
+            <a href="/tags/图表/" rel="tag"># 图表</a>
           
         </div>
       
@@ -395,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/21/Proxy/" rel="next" title="代理模式">
-                <i class="fa fa-chevron-left"></i> 代理模式
+              <a href="/2018/04/25/Promise/" rel="next" title="Promise">
+                <i class="fa fa-chevron-left"></i> Promise
               </a>
             
           </div>
@@ -404,10 +373,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/28/travel/" rel="prev" title="遍历文件">
-                遍历文件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -549,7 +514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Mocha："><span class="nav-number">1.</span> <span class="nav-text">安装 Mocha：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chai："><span class="nav-number">2.</span> <span class="nav-text">Chai：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Chai："><span class="nav-number">2.1.</span> <span class="nav-text">安装 Chai：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步测试："><span class="nav-number">3.</span> <span class="nav-text">异步测试：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钩子："><span class="nav-number">4.</span> <span class="nav-text">钩子：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

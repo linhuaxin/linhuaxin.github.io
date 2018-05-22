@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猩猩點燈">
 <meta property="og:description" content="一、yum 安装：编辑 Mongodb 安装源1vim /etc/yum.repos.d/mongodb-org-3.6.repo 编辑内容如下  [mongodb-org-3.6]name=MongoDB Repositorybaseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/gpgchec">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-12T02:11:13.343Z">
+<meta property="og:updated_time" content="2018-05-22T06:13:17.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB">
 <meta name="twitter:description" content="一、yum 安装：编辑 Mongodb 安装源1vim /etc/yum.repos.d/mongodb-org-3.6.repo 编辑内容如下  [mongodb-org-3.6]name=MongoDB Repositorybaseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/gpgchec">
@@ -365,12 +365,21 @@
 <p>停止命令:<br>service mongod stop</p>
 <p>重启命令:<br>service mongod stop</p>
 <p>远程连接:<br>mongo linhuaxin.com:27017</p>
+<p>添加一个用户：<br>db.createUser({user:’root’,pwd:’123456’,roles: [{role:’readWrite’,db:’app’}]})</p>
+<p>修改密码:<br>use admin<br>db.changeUserPassword(‘root’,’123456’)<br>db.auth(‘root’, ‘123456’)</p>
+<p>打开权限认证：<br>vim /etc/mongod.conf<br>security:<br>  authorization: enabled<br>  javascriptEnabled: false</p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
 <li><p><a href="https://www.cnblogs.com/hackyo/p/7967170.html" target="_blank" rel="noopener">Centos下安装配置Mongodb3.6</a></p>
 </li>
 <li><p><a href="https://www.cnblogs.com/layezi/p/7290082.html" target="_blank" rel="noopener">Centos环境下安装mongoDB</a></p>
 </li>
 <li><p><a href="https://www.cnblogs.com/jinxiao-pu/p/7121307.html" target="_blank" rel="noopener">mongodb远程连接配置</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000011554055" target="_blank" rel="noopener">给你的mongodb设置密码吧！</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/xp5xp6/article/details/52906467" target="_blank" rel="noopener">MongoDB 安全权限访问控制</a></p>
+</li>
+<li><p><a href="https://cnodejs.org/topic/53e0a75abd3cc3e50b8179b3" target="_blank" rel="noopener">当mongodb开启用户认证后(auth=true),如何使用mongoose链接数据库</a></p>
 </li>
 </ol>
 

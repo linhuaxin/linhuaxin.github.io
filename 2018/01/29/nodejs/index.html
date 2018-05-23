@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="猩猩點燈">
 <meta property="og:description" content="yum 安装：安装1$ yum install nodejs 新建项目12$ mkdir web$ cd web 创建  package.json 文件1$ npm init forever 让 nodejs 应用后台执行：1234$ npm install forever -g # 安装$ forever start app.js # 启动$ forever stop app.js # 关闭$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-13T02:32:48.954Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/nodejs/nodemon.png">
+<meta property="og:updated_time" content="2018-05-23T01:59:05.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js">
 <meta name="twitter:description" content="yum 安装：安装1$ yum install nodejs 新建项目12$ mkdir web$ cd web 创建  package.json 文件1$ npm init forever 让 nodejs 应用后台执行：1234$ npm install forever -g # 安装$ forever start app.js # 启动$ forever stop app.js # 关闭$">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/29/nodejs/nodemon.png">
 
 
 
@@ -357,6 +359,9 @@
 <p>新建项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir web</span><br><span class="line">$ <span class="built_in">cd</span> web</span><br></pre></td></tr></table></figure></p>
 <p>创建  package.json 文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init</span><br></pre></td></tr></table></figure></p>
 <h4 id="forever-让-nodejs-应用后台执行："><a href="#forever-让-nodejs-应用后台执行：" class="headerlink" title="forever 让 nodejs 应用后台执行："></a>forever 让 nodejs 应用后台执行：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install forever -g <span class="comment"># 安装</span></span><br><span class="line">$ forever start app.js <span class="comment"># 启动</span></span><br><span class="line">$ forever stop app.js <span class="comment"># 关闭</span></span><br><span class="line">$ forever start -l forever.log -o out.log -e err.log app.js <span class="comment"># 输出日志和错误</span></span><br></pre></td></tr></table></figure>
+<h4 id="热部署"><a href="#热部署" class="headerlink" title="热部署"></a>热部署</h4><p>1、nodemon<br>在 IntelliJ IDEA 中，run 可以，debug 启动失败<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g nodemon</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2018/01/29/nodejs/nodemon.png" alt=""><br><a href="https://blog.csdn.net/x_lord/article/details/66973605" target="_blank" rel="noopener">在IntelliJ IDEA开发nodejs进行热部署免重启</a><br>2、supervisor<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g supervisor</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -540,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#yum-安装："><span class="nav-number">1.</span> <span class="nav-text">yum 安装：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#forever-让-nodejs-应用后台执行："><span class="nav-number">2.</span> <span class="nav-text">forever 让 nodejs 应用后台执行：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#yum-安装："><span class="nav-number">1.</span> <span class="nav-text">yum 安装：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#forever-让-nodejs-应用后台执行："><span class="nav-number">2.</span> <span class="nav-text">forever 让 nodejs 应用后台执行：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#热部署"><span class="nav-number">3.</span> <span class="nav-text">热部署</span></a></li></ol></div>
             
 
           </div>

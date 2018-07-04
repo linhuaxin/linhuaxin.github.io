@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="安装： 使用 yum 安装 1yum install -y git">
+<meta name="description" content="安装： 使用 yum 安装  1yum install -y git  配置用户名和邮箱（全局） 12$ git config --global user.name &quot;username&quot;$ git config --global user.email &quot;email&quot;  查看用户名和邮箱 12$ git config user.name$ git config user.email">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git">
 <meta property="og:url" content="http://yoursite.com/2018/01/24/Git/index.html">
 <meta property="og:site_name" content="猩猩點燈">
-<meta property="og:description" content="安装： 使用 yum 安装 1yum install -y git">
+<meta property="og:description" content="安装： 使用 yum 安装  1yum install -y git  配置用户名和邮箱（全局） 12$ git config --global user.name &quot;username&quot;$ git config --global user.email &quot;email&quot;  查看用户名和邮箱 12$ git config user.name$ git config user.email">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-19T06:40:00.498Z">
+<meta property="og:updated_time" content="2018-07-04T10:41:45.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
-<meta name="twitter:description" content="安装： 使用 yum 安装 1yum install -y git">
+<meta name="twitter:description" content="安装： 使用 yum 安装  1yum install -y git  配置用户名和邮箱（全局） 12$ git config --global user.name &quot;username&quot;$ git config --global user.email &quot;email&quot;  查看用户名和邮箱 12$ git config user.name$ git config user.email">
 
 
 
@@ -354,11 +354,54 @@
 
       
         <h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><ol>
-<li>使用 yum 安装 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+<li><p>使用 yum 安装 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置用户名和邮箱（全局）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span></span><br><span class="line">$ git config --global user.email <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看用户名和邮箱</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <a id="more"></a>
 <ol>
+<li><p>查看仓库当前状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看文件修改内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff readme.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看提交历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>添加 –graph 参数可查看分支合并图</p>
+<ol>
+<li><p>切换版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^ // 回到上一个版本</span><br><span class="line">$ git reset --hard 5fbd7b // 去到版本 5fbd7b</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看命令历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>让文件回到最近一次 git commit 或 git add 时的状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把暂存区的修改撤销掉（unstage），重新放回工作区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git checkout命令加上-b参数表示创建并切换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev</span><br><span class="line"><span class="comment"># 相当于以下两条命令：</span></span><br><span class="line">$ git branch dev</span><br><span class="line">$ git checkout dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git merge feature1 <span class="comment"># 如果可能，使用 Fast Forward 模式合并</span></span><br><span class="line">$ git merge --no-ff -m <span class="string">"merge with no-ff"</span> dev <span class="comment"># no-ff 参数保留分支提交记录</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存、恢复工作现场</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git stash <span class="comment"># 保存工作现场</span></span><br><span class="line">$ git stash pop <span class="comment"># 恢复工作现场</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>创建一个 git 用户，用来运行 git 服务</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd git <span class="comment"># 添加 git 用户</span></span><br><span class="line">passwd git <span class="comment"># 设置密码</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -383,17 +426,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">touch README</span><br><span class="line">git add README </span><br><span class="line">git commit -m <span class="string">'first commit'</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>推送本地库到远程库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@linhuaxin.com:/git/demo.git</span><br><span class="line">git push -u origin master <span class="comment"># 可直接使用 IED 提交</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@linhuaxin.com:/git/demo.git</span><br><span class="line">git push -u origin master <span class="comment"># 可直接使用 IED 提交，第一次提交才加参数 -u</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h4 id="命令："><a href="#命令：" class="headerlink" title="命令："></a>命令：</h4><ol>
 <li><p>用户名和邮箱地址的作用<br>用户名和邮箱地址是本地git客户端的一个变量，不随git库而改变。<br>每次commit都会用用户名和邮箱纪录。<br>github的contributions统计就是按邮箱来统计的。</p>
-</li>
-<li><p>查看用户名和邮箱地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改用户名和邮箱地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span></span><br><span class="line">$ git config --global user.email <span class="string">"email"</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取主分支最新版本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin master:master</span><br></pre></td></tr></table></figure>

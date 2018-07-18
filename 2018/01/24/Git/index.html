@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="猩猩點燈">
 <meta property="og:description" content="安装： 使用 yum 安装  1yum install -y git  配置用户名和邮箱（全局） 12$ git config --global user.name &quot;username&quot;$ git config --global user.email &quot;email&quot;  查看用户名和邮箱 12$ git config user.name$ git config user.email">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-04T10:41:45.028Z">
+<meta property="og:updated_time" content="2018-07-05T01:27:11.171Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="安装： 使用 yum 安装  1yum install -y git  配置用户名和邮箱（全局） 12$ git config --global user.name &quot;username&quot;$ git config --global user.email &quot;email&quot;  查看用户名和邮箱 12$ git config user.name$ git config user.email">
@@ -406,7 +406,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd git <span class="comment"># 添加 git 用户</span></span><br><span class="line">passwd git <span class="comment"># 设置密码</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建一个目录，专门存放 git 仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /git</span><br><span class="line">chown -R git:git /git</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /git</span><br><span class="line">chown -R git:git /git0</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建一个空仓库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init --bare /git/demo.git</span><br><span class="line">chown -R git:git /git/demo.git</span><br></pre></td></tr></table></figure>
